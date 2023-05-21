@@ -11,41 +11,42 @@
 
 <body>
     <div id="search-container">
-        <input type="search" placeholder="Search here..." name="Search here for your next Crypto" id="search-bar">
+        <input type="search" placeholder="Search here..." name="cryptoSearch" id="crypto-search-input">
+        <ul id="search-results" class="show"></ul>
+        <div id="errorMessage" style="color: red;"></div>
     </div>
-    <div id="welcome-logo">
-        <h1>CryptoCurrency Prices by Market Cap</h1>
+    <div id="coin-details"></div>
+    <div id="welcome-message">
+
+        <h1>Prices by Market Cap<img class="logo-png" src="PNG\Full color\[latest]coingecko_logo_with_dark_text.png"
+                alt="Coin Gecko" /></h1>
     </div>
     <div id="table-container">
         <table>
             <tr id="table-header">
-                <td>#</td>
-                <td>Coin</td>
-                <td>Price</td>
-                <td>1h</td>
-                <td>24h</td>
-                <td>7h</td>
-                <td>24h Volume</td>
-                <td>Mkt Cap</td>
-                <td>Last 7 \Days</td>
+                <th>#</th>
+                <th>Coin</th>
+                <th>Price</th>
+                <th>1h</th>
+                <th>24h</th>
+                <th>7d</th>
+                <th>24h Volume</th>
+                <th>Mkt Cap</th>
+                <th>Last 7 Days</th>
             </tr>
-            <tr id="content">
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-            </tr>
+            <tbody id="table-body"></tbody>
         </table>
     </div>
     <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
 </body>
 
 
-<!-- <footer>"Data provided by CoinGecko"</footer> -->
+<footer>
+    <div class="footer">
+        <p> Data provided by CoinGecko © 2023 <a href="mailto:moe.alamin.ma@gmail.com">Mohamad Alamin</a></p>
+    </div>
+</footer>
 
 </html>

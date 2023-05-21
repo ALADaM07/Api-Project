@@ -1,67 +1,124 @@
-
-* {  
-    Font-family: Arial, sans-serif; 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
+* {
+  font-family: "Comic Sans MS", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 body {
-padding: 10px;
-
-  }
-
-  #search-bar {
-    border: 1px dashed rgb(175, 185, 120);
-    width: 100%;
-    height: 30px;
-    margin-bottom: 20px;
-    
-  }
-
- #table-content {
-    overflow-x: auto;
- }
-h1 {
-    margin-top: 100px;
+  padding: 10px;
+  padding-bottom: 80px;
 }
- table {
-    width: 100%;
+
+#crypto-search-input {
+  border: 1px dashed rgb(175, 185, 120);
+  width: 100%;
+  height: 30px;
+  margin-bottom: 7px;
+}
+
+/* Search bar styles */
+#crypto-search-input {
+  position: relative;
+  z-index: 1;
+}
+
+#search-container {
+  position: relative;
+}
+
+#search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  list-style: none;
+  display: none;
+}
+
+#search-results li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#search-results li:hover {
+  background-color: #f5f5f5;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.logo-png {
+  margin-top: 20px;
+  max-width: 200px;
+  max-height: 200px;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+}
+
+#table-content {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+table,
+tr,
+td {
+  border: 1px solid rgb(175, 185, 120);
+  border-collapse: collapse;
+  padding: 8px;
+}
+
+.coinName {
+  font-weight: bold;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 3px;
+}
+
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .logo-png {
+    max-width: 150px;
+    max-height: 150px;
+    position: static;
     margin-top: 20px;
- }
-
- table, tr, td {
-    border: 1px solid rgb(175, 185, 120);
-    border-collapse: collapse;
-    padding: 8px;
- }
-
-
-
-  
-  /* Add media queries for different screen sizes */
-  /* For small screens */
-  @media (max-width: 600px) {
-    /* Adjust the styles as per your requirements */
-    body {
-      font-size: 14px;
-    }
   }
-  
-  /* For medium screens */
-  @media (min-width: 601px) and (max-width: 1024px) {
-    /* Adjust the styles as per your requirements */
-    body {
-      font-size: 16px;
-    }
+}
+
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
   }
-  
-  /* For large screens */
-  @media (min-width: 1025px) {
-    /* Adjust the styles as per your requirements */
-    body {
-      font-size: 18px;
-    }
+}
+
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
   }
-  
+}
