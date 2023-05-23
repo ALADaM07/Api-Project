@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD:client/public/index.html
+    <link rel="stylesheet" href="/client/src/style.css">
+    <link rel="icon" type="image/x-icon" href="/client/public/favicon.png">
+    <title>Crypto Prices By CoinGecko</title>
+=======
+    <link rel="stylesheet" href="style.css">
+    <title>Crypto Prices Powered By Coin Gecko</title>
+    <link rel="icon" type="image/x-icon" href="PNG\Full color\[latest] coingecko_logo_without_text.png">
+>>>>>>> 704dd1c30979a7d7dc41678299ca800a0f6e0563:index.html
+</head>
+
+<body>
+    <div id="search-container">
+        <input type="search" placeholder="Search here..." name="cryptoSearch" id="crypto-search-input">
+        <ul id="search-results" class="show"></ul>
+        <div id="exrrorMessage" style="color: red;"></div>
+    </div>
+    <div id="welcome-message">
+        <div id="coin-details"></div>
+
+        <h1>Prices by Market Cap<img class="logo-png"
+                src="/client/src/img/logo/Full color/[latest]coingecko_logo_with_dark_text.png" alt="Coin Gecko" /></h1>
+    </div>
+    <div id="table-container">
+        <table>
+            <tr id="table-header">
+                <th>#</th>
+                <th>Coin</th>
+                <th>Price</th>
+                <th>1h</th>
+                <th>24h</th>
+                <th>7d</th>
+                <th>24h Volume</th>
+                <th>Mkt Cap</th>
+                <th>Last 7 Days</th>
+            </tr>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+    <script src="/client/src/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+</body>
+
+
+<footer>
+    <div class="footer">
+        <p> Data provided by CoinGecko © 2023 <a href="mailto:moe.alamin.ma@gmail.com">Mohamad Alamin</a></p>
+    </div>
+</footer>
+
+</html>
