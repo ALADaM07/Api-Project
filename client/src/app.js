@@ -197,6 +197,7 @@ function createTableRow(rank, data) {
   }" width="13"> <span class="coinName"><a style="color: black; text-decoration: none;" href="#" onclick="fetchCoinDetails('${
     data.id
   }')">${data.name}</a></span></td>
+
     <td>$${data.current_price.toLocaleString()}</td>
     <td>${data.price_change_percentage_1h_in_currency.toFixed(2)}%</td>
     <td>${data.price_change_percentage_24h.toFixed(2)}%</td>

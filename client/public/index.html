@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/client/src/style.css">
+    <link rel="icon" type="image/x-icon" href="/client/public/favicon.png">
+    <title>Crypto Prices By CoinGecko</title>
 </head>
 
 <body>
     <div id="search-container">
         <input type="search" placeholder="Search here..." name="cryptoSearch" id="crypto-search-input">
         <ul id="search-results" class="show"></ul>
-        <div id="errorMessage" style="color: red;"></div>
+        <div id="exrrorMessage" style="color: red;"></div>
     </div>
-    <div id="coin-details"></div>
     <div id="welcome-message">
+        <div id="coin-details"></div>
 
-        <h1>Prices by Market Cap<img class="logo-png" src="PNG\Full color\[latest]coingecko_logo_with_dark_text.png"
-                alt="Coin Gecko" /></h1>
+        <h1>Prices by Market Cap<img class="logo-png"
+                src="/client/src/img/logo/Full color/[latest]coingecko_logo_with_dark_text.png" alt="Coin Gecko" /></h1>
     </div>
     <div id="table-container">
         <table>
@@ -37,7 +38,7 @@
             <tbody id="table-body"></tbody>
         </table>
     </div>
-    <script src="app.js"></script>
+    <script src="/client/src/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 
 </body>

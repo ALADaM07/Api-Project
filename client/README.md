@@ -14,13 +14,13 @@ Incorporation of a currency selection option, enabling users to view cryptocurre
 In the attached Img you will have a clear view about how the design will be:
 
 #### Main Page
-![Main Page](/client/src/img/main%20page.jpg)
+![Main Page](main%20page.jpg)
 
 #### Searching a coin
-![Searching a coin](/client/src/img/searching%20a%20coin.jpg)
+![Searching a coin](searching%20a%20coin.jpg)
 
 #### Error Handeling
-![Error Handeling](/client/src/img/Error%20handeling.jpg)
+![Error Handeling](Error%20handeling.jpg)
 
 ### To ensure smooth operation of the project, the following considerations have been made:
 
