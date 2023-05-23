@@ -23,7 +23,8 @@ function coinSearch() {
       const filteredResults = coinsData.filter(
         (coin) =>
           coin.name.toLowerCase().includes(searchTerm) ||
-          coin.symbol.toLowerCase().includes(searchTerm)
+          coin.symbol.toLowerCase().includes(searchTerm) ||
+          `${coin.name} (${coin.symbol})`.toLowerCase().includes(searchTerm)
       );
       const results = filteredResults.map(
         (coin) => `${coin.name} (${coin.symbol})`
@@ -124,7 +125,7 @@ window.onload = () => {
 
     if (searchInput.value.trim().length === 0) {
       renderResults([]);
-      coinDetailsContainer.innerHTML = ''; // Clear the coin details container
+      coinDetailsContainer.innerHTML = '';
       return;
     }
 
@@ -136,7 +137,7 @@ window.onload = () => {
   searchInput.addEventListener('search', () => {
     if (searchInput.value.trim().length === 0) {
       renderResults([]);
-      coinDetailsContainer.innerHTML = ''; // Clear the coin details container
+      coinDetailsContainer.innerHTML = '';
     }
   });
   searchInput.addEventListener('click', () => {
@@ -187,7 +188,6 @@ async function updateTable() {
 
 function createTableRow(rank, data) {
   const row = document.createElement('tr');
-  console.log(data);
   row.innerHTML = `
     <td>${rank}</td>
     <td><img src="${data.image}" alt="${
