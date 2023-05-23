@@ -36,7 +36,7 @@ function coinSearch() {
       document.getElementById('errorMessage').innerHTML = new Error(
         'Failed to fetch data'
       );
-      alert(`Failed to fetch data error`);
+      alert(`Error: Failed to fetch data ${error}`);
       renderResults([]);
     });
 }
