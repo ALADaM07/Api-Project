@@ -1,3 +1,6 @@
+#### Project Page Link : [Crypto Priceses - CoinGecko (API)](https://aladam07.github.io/coin-gecko-api-project/)
+
+
 
 ## Project Description
 The project aims to develop a user-friendly web application that provides real-time cryptocurrency prices in USD. Users will be able to easily access the prices of various cryptocurrencies, along with important metrics such as percentage changes in price over the past 1 hour, 24 hours, and 7 days. Additionally, the application will display the 24-hour trading volume and market capitalization for each cryptocurrency.
