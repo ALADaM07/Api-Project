@@ -116,37 +116,6 @@ function renderResults(results) {
   }
 }
 
-let searchTimeoutToken = 0;
-window.onload = () => {
-  const searchInput = document.getElementById('crypto-search-input');
-  const coinDetailsContainer = document.getElementById('coin-details');
-
-  searchInput.onkeyup = (event) => {
-    clearTimeout(searchTimeoutToken);
-
-    if (searchInput.value.trim().length === 0) {
-      renderResults([]);
-      coinDetailsContainer.innerHTML = '';
-      return;
-    }
-
-    setTimeout(() => {
-      coinSearch();
-    }, 370);
-  };
-
-  searchInput.addEventListener('search', () => {
-    if (searchInput.value.trim().length === 0) {
-      renderResults([]);
-      coinDetailsContainer.innerHTML = '';
-    }
-  });
-
-  searchInput.addEventListener('click', () => {
-    coinSearch();
-  });
-};
-
 /*
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
@@ -172,7 +141,6 @@ async function fetchData() {
     throw error;
   }
 }
-fetchData();
 async function updateTable() {
   const tableBody = document.getElementById('table-body');
   tableBody.innerHTML = '';
@@ -209,7 +177,37 @@ function createTableRow(rank, data) {
   return row;
 }
 
-updateTable();
+let searchTimeoutToken = 0;
+window.onload = () => {
+  const searchInput = document.getElementById('crypto-search-input');
+  const coinDetailsContainer = document.getElementById('coin-details');
+
+  searchInput.onkeyup = () => {
+    clearTimeout(searchTimeoutToken);
+
+    if (searchInput.value.trim().length === 0) {
+      renderResults([]);
+      coinDetailsContainer.innerHTML = '';
+      return;
+    }
+
+    setTimeout(() => {
+      coinSearch();
+    }, 370);
+  };
+
+  searchInput.addEventListener('search', () => {
+    if (searchInput.value.trim().length === 0) {
+      renderResults([]);
+      coinDetailsContainer.innerHTML = '';
+    }
+  });
+
+  searchInput.addEventListener('click', () => {
+    coinSearch();
+  });
+  updateTable();
+};
 
 // TODO : Display the chart of the coin :( the API link for the chart :
 // TODO : https://api.coingecko.com/api/v3/coins/helium/market_chart?vs_currency=usd&days=1
